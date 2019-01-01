@@ -54,7 +54,7 @@ module.exports = {
           name: 'common',
           minChunks: 2,
           chunks: 'all',
-          // minSize: 1,
+          minSize: 1,
           priority: 0
         },
         vendor: {

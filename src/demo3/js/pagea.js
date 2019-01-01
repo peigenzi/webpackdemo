@@ -1,6 +1,5 @@
 import './suba';
-import a from './test';
-console.log(a);
+import './module';
 
 console.log('at pageA');
 
