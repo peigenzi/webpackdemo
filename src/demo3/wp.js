@@ -18,8 +18,8 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].chunk.js'
+    filename: '[name].[contenthash:6].js',
+    // chunkFilename: '[name].chunk.js'
   },
 
   module: {
@@ -47,12 +47,14 @@ module.exports = {
   ],
 
   optimization: {
+    runtimeChunk: true,
     splitChunks: {
       cacheGroups: {
         common: {
           name: 'common',
+          minChunks: 2,
           chunks: 'all',
-          minSize: 1,
+          // minSize: 1,
           priority: 0
         },
         vendor: {
